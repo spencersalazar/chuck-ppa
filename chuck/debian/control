@@ -1,0 +1,15 @@
+Source: chuck
+Section: universe/sound
+Priority: optional
+Maintainer: Spencer Salazar <spencer@ccrma.stanford.edu>
+Build-Depends: debhelper (>= 8.0.0), bison (>= 1:2.5), flex (>= 2.5.35), libasound2-dev (>= 1.0.25), libpulse-dev (>= 1:1.1), libsndfile1-dev (>= 1.0.25-4)
+Standards-Version: 3.9.2
+Homepage: http://chuck.stanford.edu/
+#Vcs-Git: git://git.debian.org/collab-maint/chuck.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/chuck.git;a=summary
+
+Package: chuck
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: ChucK Music Programming Language
+ ChucK is a programming language for real-time sound synthesis and music creation. It is open-source and freely available on MacOS X, Windows, and Linux. ChucK presents a unique time-based, concurrent programming model that's precise and expressive (we call this strongly-timed), dynamic control rates, and the ability to add and modify code on-the-fly. In addition, ChucK supports MIDI, OpenSoundControl, HID device, and multi-channel audio. It's fun and easy to learn, and offers composers, researchers, and performers a powerful programming tool for building and experimenting with complex audio synthesis/analysis programs, and real-time interactive music.

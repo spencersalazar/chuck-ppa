@@ -1,0 +1,11 @@
+chuck (1.3.4.0-ppa2) precise; urgency=low
+
+  * Build fix.
+
+ -- Spencer Salazar <spencer@ccrma.stanford.edu>  Thu, 20 Nov 2014 03:32:00 -0800
+
+chuck (1.3.4.0-ppa1) precise; urgency=low
+
+  * Initial release
+
+ -- Spencer Salazar <spencer@ccrma.stanford.edu>  Thu, 20 Nov 2014 01:55:25 -0800
