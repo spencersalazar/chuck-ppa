@@ -13,9 +13,12 @@
 	dh $@ 
 
 override_dh_auto_configure: # do nothing
+	
 
 override_dh_auto_build:
+	$(MAKE) -C src clean
 	$(MAKE) -C src linux-pulse
 
 override_dh_auto_install:
 	$(MAKE) -C src DESTDIR=$$(pwd)/debian/chuck/usr/bin install
+

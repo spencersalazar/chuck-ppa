@@ -1,0 +1,109 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Thu, 20 Nov 2014 01:55:25 -0800
+Source: chuck
+Binary: chuck
+Architecture: source
+Version: 1.3.4.0a-ppa1
+Distribution: precise
+Urgency: low
+Maintainer: Spencer Salazar <spencer@ccrma.stanford.edu>
+Changed-By: Spencer Salazar <spencer@ccrma.stanford.edu>
+Description: 
+ chuck      - ChucK Music Programming Language
+Changes: 
+ chuck (1.3.4.0a-ppa1) precise; urgency=low
+ .
+     - Initial PPA release
+     - (added) chuck operator connects between arrays of ugens, multi-channel
+               ugens, and mono unit ugens
+               ex.
+                   SinOsc s => Pan2 pan => Gain master[2] => dac;
+               persists stereo signal through master to dac.
+               See examples/stereo/array.ck for example usage.
+     - (added) new OSC support classes
+               - OscOut
+                 Sends OSC messages
+                   - .dest(string host, int port)
+                     set destination hostname or IP address and port
+                   - .start(string addr)
+                     set target OSC address to addr
+                   - .add(int i)
+                   - .add(float f)
+                   - .add(string s)
+                     add argument to the message
+                   - .send()
+                     send message
+               - OscIn extends Event
+                 Receives OSC messages
+                   - int .port
+                     port number to listen to
+                   - .addAddress(string addr)
+                     listen for OSC addresses matching addr
+                   - .removeAddress(string addr)
+                     stop listening for OSC addresses matching addr
+                   - .listenAll()
+                     listen for all incoming OSC messages on port
+                   - int .recv(OscMsg msg)
+                     retrieve pending OSC messages into msg. Returns 1 if a
+                     message was available, 0 otherwise
+               - OscMsg
+                 Encapsulates a received OSC message
+                   - string .address
+                     the OSC address this message was sent to
+                   - string .typetag
+                     the OSC typetag of this message
+                   - int .getInt(int i)
+                   - float .getFloat(int i)
+                   - string .getString(int i)
+                     retrieve the argument at position i of the given type
+               See examples/osc/ for examples on usage.
+               OscRecv and OscSend are still supported for backwards compatibility,
+               but new code should use OscIn and OscOut.
+     - (added) new SerialIO functions
+               - .writeByte(int b)
+                 write byte b to the serial stream
+               - .writeBytes(int b[])
+                 write array of bytes b to the serial stream
+     - (added) new chugins (from Joel Matthys)
+               - PitchTrack
+                 Monophonic autocorrelation pitch tracker, based on [helmholtz~] by
+                 Katja, http://www.katjaas.nl/helmholtz/helmholtz.html
+               - GVerb
+                 Good quality stereo reverb with adjustable parameters
+               - Mesh2D
+                 STK instrument that simulates a rectilinear, 2-dimensional digital
+                 waveguide mesh structure. Basically sounds like striking a metal
+                 plate.
+               - Spectacle
+                 FFT-based spectral delay and EQ
+               - Elliptic
+                 Elliptic filter, capable of very steep slopes or interesting
+                 harmonic ripples
+     - (fixed) ChucK Shell fixes
+Checksums-Sha1: 
+ dba4c77a0a9f14d03d5f2555e3aeddb537f9bb7b 1505 chuck_1.3.4.0a-ppa1.dsc
+ ace3439821077d4d7858b918f830c4d4dc0de1a7 27816789 chuck_1.3.4.0a.orig.tar.gz
+ 2c84149023dd38f2594cdd55226d57e7bb9a8d41 3040 chuck_1.3.4.0a-ppa1.debian.tar.gz
+Checksums-Sha256: 
+ 64c3971158313ff32ff985ad7369b3485a55171fc668607bd54d3207438e3686 1505 chuck_1.3.4.0a-ppa1.dsc
+ 4572f169ca26299f111d6d9900bbc1ea891af771aaef58bf02bfc6d476090b19 27816789 chuck_1.3.4.0a.orig.tar.gz
+ 12ff18d6e29fe235ec9b8d4cf7c69c5a78c7df2326c32e3c5c328e7b52ad5b90 3040 chuck_1.3.4.0a-ppa1.debian.tar.gz
+Files: 
+ 2f79f13d08964b12d7363ed0f3550d72 1505 universe/sound optional chuck_1.3.4.0a-ppa1.dsc
+ 11dcccb39e2c8a990353db4e28747c85 27816789 universe/sound optional chuck_1.3.4.0a.orig.tar.gz
+ be872155dc82569180d8cb2936583f8a 3040 universe/sound optional chuck_1.3.4.0a-ppa1.debian.tar.gz
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQEcBAEBAgAGBQJUmVrDAAoJEMDe7ZN3CPgE+9QH/0vuLjrpdgJEWf7o/aMCpe7K
+d1srEL6ZfQ+ZwzlnEs8RQe14U4KqvREk8j7IgXD0DVk8AtOXBTHXgHIZInh5U2hd
+KQaS/7YS3iesZ+cC8wXKyEkXxS1a+QScMHu3AxkZRDHt0JtdNT81YoNJcuokHXgg
+OOSLt5rUwwj6qH2Xw49lhTUokartgut829lC7clw+BLCYroy8HJ8cTIvy6xq7KTk
+wfm1zqbEmw5+XEmwCYs79MfBQNRr7HuDzfA8gzKr1e+PrBS+Fw3UMhXGCmNCpibC
+O7XU/atwTHMmwl8XvolGe8x3WMSF4Xzj+ReG4p2JTlOXF4H6dp6xR22T7b1j3nc=
+=mDkE
+-----END PGP SIGNATURE-----

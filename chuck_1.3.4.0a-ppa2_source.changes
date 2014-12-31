@@ -1,0 +1,40 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+Format: 1.8
+Date: Thu, 20 Nov 2014 01:55:25 -0800
+Source: chuck
+Binary: chuck
+Architecture: source
+Version: 1.3.4.0a-ppa2
+Distribution: precise
+Urgency: low
+Maintainer: Spencer Salazar <spencer@ccrma.stanford.edu>
+Changed-By: Spencer Salazar <spencer@ccrma.stanford.edu>
+Description: 
+ chuck      - ChucK Music Programming Language
+Changes: 
+ chuck (1.3.4.0a-ppa2) precise; urgency=low
+ .
+     - updated PPA for amd64 build
+Checksums-Sha1: 
+ ae94261d84118457d4be7eb9e3330d2427bdda9f 1505 chuck_1.3.4.0a-ppa2.dsc
+ 24dcbe761a9cb44505fb96f3585cf3069ff1228e 3112 chuck_1.3.4.0a-ppa2.debian.tar.gz
+Checksums-Sha256: 
+ acd8210fa5ba87aae077ba6279f1df50778f0744a3cc9f7302b651202348ab14 1505 chuck_1.3.4.0a-ppa2.dsc
+ 62a7233a7658f25c340c65d0fca952045cc79d05365fa06ab55164fdbba51d32 3112 chuck_1.3.4.0a-ppa2.debian.tar.gz
+Files: 
+ 7601753c3be4e018641f13512410cc59 1505 universe/sound optional chuck_1.3.4.0a-ppa2.dsc
+ 8821bda84bef93cc49c28f9bb2b95fda 3112 universe/sound optional chuck_1.3.4.0a-ppa2.debian.tar.gz
+
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.4.11 (GNU/Linux)
+
+iQEcBAEBAgAGBQJUo2vIAAoJEMDe7ZN3CPgEnHQH/Rz6U7cPWTvsny/F1CxdbHpn
+oEan6iCw5+o/RyjF/WESug/j11Zp3gaIsgUdYIl4ZWYhqKGqSUtadjZ1h19ghj3l
+uBo9esJpJdyUAo24+Mn9p7wo8eDfX8SMcBEmZyKN9dp8jBVW0xC5ip+xHiQNYo2R
+Xdu4PouOE0orlmutxckkpvmQc7aTzRdRXy+0Vief/HFh9L5wvFeftcrUqn3WLUNc
+Xc9XVwaSruA8LNmIkDrZxVaIx4siF+F3e9xn0Skj9AFlefrchvSMVXYqzDf/d0Dd
+ojqR8s1Whsgrq4BAwhL1BPcyg3OlaSkOYq0VLi4mEMG2R+Bf0jm+SDRlEvPSVVk=
+=TT7P
+-----END PGP SIGNATURE-----
